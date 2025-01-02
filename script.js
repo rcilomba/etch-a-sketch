@@ -34,7 +34,7 @@ sizeChangeButton.textContent = "Change size";
 document.body.insertBefore(sizeChangeButton, document.querySelector("#container"));
 
 
-sizeChangeButton.addEventListener("click", ()=>{
+function handleGridSizeChange(){
     const gridSize = sizeChangeInput.value;
     console.log("gridsize", gridSize);
     if(gridSize < 2 || gridSize > 100){
@@ -42,5 +42,12 @@ sizeChangeButton.addEventListener("click", ()=>{
         return;
     }
     createGrid(gridSize);
-})
+}
 
+sizeChangeButton.addEventListener("click", handleGridSizeChange)
+
+sizeChangeInput.addEventListener("keydown", (e)=>{
+    if(e.key === "Enter"){
+        handleGridSizeChange();
+    }
+});
