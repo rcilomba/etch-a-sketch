@@ -1,0 +1,31 @@
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+#container {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#sketch-container {
+    display: grid;
+    width: 90vw; 
+    height: 90vh; 
+    max-width: 960px; 
+    max-height: 960px; 
+}
+
+.square {
+    background-color: rgb(232, 238, 238);
+    border: 1px solid rgb(73, 67, 67);
+}
