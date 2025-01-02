@@ -26,12 +26,12 @@ createGrid(16);
 
 const sizeChangeInput = document.createElement("input");
 sizeChangeInput.placeholder = "Set size: 2-100";
-document.body.insertBefore(sizeChangeInput, document.getElementById("container"));
+document.body.insertBefore(sizeChangeInput, document.querySelector("#container"));
 
 const sizeChangeButton = document.createElement("button");
 sizeChangeButton.classList.add("size-buttton")
 sizeChangeButton.textContent = "Change size";
-document.body.insertBefore(sizeChangeButton, document.getElementById("container"));
+document.body.insertBefore(sizeChangeButton, document.querySelector("#container"));
 
 
 sizeChangeButton.addEventListener("click", ()=>{
